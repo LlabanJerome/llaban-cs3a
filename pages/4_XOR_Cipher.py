@@ -42,4 +42,3 @@ if st.button("Submit"):
             st.write("Decrypted:", decryption.decode())
     st.balloons()
     st.snow()
-    st.lantern()
