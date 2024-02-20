@@ -7,6 +7,9 @@ plaintext = st.text_area("Plain Text:")
 key= st.text_input("Key:")
 
 plaintext = bytes(plaintext.encode())
+
+key= bytes(key.encode())
+
 def xor_encrypt(plaintext, key):
     """Encrypts plaintext using XOR cipher with the given key, printing bits involved."""
     ciphertext = bytearray()
