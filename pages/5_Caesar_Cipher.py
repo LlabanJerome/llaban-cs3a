@@ -2,7 +2,6 @@ import streamlit as st
 
 st.header("Caesar Cipher")
 
-
 def encrypt_decrypt(text, shift_keys, ifdecrypt):
     """Encrypts or decrypts text using the Caesar Cipher.
 
