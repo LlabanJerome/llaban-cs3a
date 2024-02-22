@@ -1,5 +1,6 @@
 import streamlit as st
 
+# Function to check if a number is prime
 def prime(n):
     if n < 2:
         return False
@@ -8,6 +9,7 @@ def prime(n):
             return False
     return True
 
+# Function to handle user input
 def primitive_input(prompt):
     while True:
         user_input = input(prompt)
@@ -20,12 +22,14 @@ def primitive_input(prompt):
         except ValueError:
             print("Please Enter a valid integer")
     
+# Function to calculate modulus
 def modulus(base, exponent, mod):
     result = 1
     for _ in range(exponent):
         result = (result * base) % mod
     return result
     
+# Function to find primitive roots
 def primitive_roots(p):       
     primitive_root = []
     for g in range(1, p):
@@ -40,6 +44,7 @@ def primitive_roots(p):
             primitive_root.append(g)
     return primitive_root
     
+# Function to print primitive roots
 def print_primitive(p, prim_num):
     if not prime(p):
         st.write(f"{p} is not a prime number!!")
@@ -71,6 +76,8 @@ def print_primitive(p, prim_num):
 
 def main():
     st.title("Primitive Roots Calculator")
+    st.balloons()
+    st.snow()
     p = st.number_input("Enter a prime number (p)", value=2, step=1)
     prim_num = st.number_input("Enter a primitive number (prim_num)", value=1, step=1)
     if st.button("Calculate"):
