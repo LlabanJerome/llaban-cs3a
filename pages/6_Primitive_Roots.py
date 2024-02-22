@@ -78,6 +78,7 @@ def main():
     st.title("Primitive Roots Calculator")
     st.balloons()
     st.snow()
+    st.fireworks()
     p = st.number_input("Enter a prime number (p)", value=2, step=1)
     prim_num = st.number_input("Enter a primitive number (prim_num)", value=1, step=1)
     if st.button("Calculate"):
@@ -85,3 +86,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
